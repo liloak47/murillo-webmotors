@@ -66,3 +66,7 @@ export const Button = styled.button`
       `
       : null}
 `;
+
+export const Input = styled.input`
+  margin: 50px;
+`;
