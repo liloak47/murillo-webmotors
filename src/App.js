@@ -1,9 +1,11 @@
 import "./App.css";
-
+import Routes from "./routes";
+import { GlobalStyle } from "../src/global/index";
 function App() {
   return (
     <div className="App">
-      <h1>WEBMOTORS</h1>
+      <GlobalStyle />
+      <Routes />
     </div>
   );
 }
