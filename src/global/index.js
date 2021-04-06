@@ -13,6 +13,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     font-family: Open-Sans, Helvetica, Sans-Serif;
+    background-color: ${COLORS.secondary}
   }
   div{
     box-sizing: border-box
@@ -67,6 +68,13 @@ export const Button = styled.button`
       : null}
 `;
 
-export const Input = styled.input`
-  margin: 50px;
+export const Container = styled.div`
+  margin: 40px 0px;
+  padding: 0px 120px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
 `;
+
+export const Input = styled.input``;
