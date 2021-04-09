@@ -5,12 +5,16 @@ import services from "../../services/services";
 import { Button } from "../../global/index";
 import api from "../../services/api";
 import years from "../../helpers/Years/index";
+import FilterVehicles from "../FilterVehicles";
 
 const SearchCar = () => {
   const [marks, setMarks] = useState([]);
   const [models, setModels] = useState([]);
+  const [nameMark, setNameMark] = useState("");
   const [versions, setVersions] = useState([]);
-  const [selectedMark, setSelectedMark] = useState();
+  const [selectedMark, setSelectedMark] = useState(0);
+  const [selectedModel, setSelectedModel] = useState("");
+  const [showCarsFilters, setShowCharsFilters] = useState(false);
 
   const getMarks = async () => {
     try {
@@ -30,13 +34,23 @@ const SearchCar = () => {
       setVersions(resp.data);
     });
   };
+  const getNameMark = () => {
+    marks.filter((mark) =>
+      mark.ID === Number(selectedMark) ? setNameMark(mark.Name) : null
+    );
+  };
+  const clearFilter = () => {
+    setSelectedModel("");
+    setSelectedMark(0);
+    setShowCharsFilters(false);
+  };
 
   useEffect(() => {
     getMarks();
     getModels();
     getVersions();
-  }, [selectedMark]);
-
+    getNameMark();
+  }, [selectedMark, selectedModel]);
   return (
     <div className="box-search">
       <div className="type-movel">
@@ -90,7 +104,12 @@ const SearchCar = () => {
                 </option>
               ))}
             </select>
-            <select name="" id="">
+            <select
+              name=""
+              id=""
+              value={selectedModel}
+              onChange={(e) => setSelectedModel(e.target.value)}
+            >
               <option selected value={0}>
                 Modelo: Todas
               </option>
@@ -116,10 +135,15 @@ const SearchCar = () => {
       <div className="footer-form">
         <SrcAdvanced />
         <div className="group-btn-footer">
-          <Button clear>Limpar filtros</Button>
-          <Button>VER OFERTAS</Button>
+          <Button clear onClick={clearFilter}>
+            Limpar filtros
+          </Button>
+          <Button onClick={() => setShowCharsFilters(true)}>VER OFERTAS</Button>
         </div>
       </div>
+      {showCarsFilters === true ? (
+        <FilterVehicles nameMark={nameMark} selectedModel={selectedModel} />
+      ) : null}
     </div>
   );
 };
