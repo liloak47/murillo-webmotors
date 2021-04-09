@@ -64,7 +64,9 @@ export const Button = styled.button`
   border-radius: 2px;
   transition-duration: 0.5s;
   cursor: pointer;
-
+  @media (max-width: 729px) {
+    width: 150%;
+  }
   &:hover {
     filter: brightness(85%);
   }
@@ -106,6 +108,9 @@ export const Container = styled.div`
   justify-content: center;
   width: 100%;
   align-items: center;
+  @media (max-width: 729px) {
+    padding: 0px 20px;
+  }
 `;
 
 export const Input = styled.input``;

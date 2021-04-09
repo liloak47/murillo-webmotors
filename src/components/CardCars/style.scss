@@ -5,7 +5,7 @@
   margin: 20px;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0px 0px 6px 1px #dcdde1;
+  box-shadow: 0px 0px 15px 0px #dcdde1;
   figure {
     width: 200px;
     margin: 0;
@@ -31,5 +31,8 @@
       font-size: 12px;
       margin-bottom: 5px;
     }
+  }
+  @media screen and(max-width: 729px) {
+    width: 100%;
   }
 }

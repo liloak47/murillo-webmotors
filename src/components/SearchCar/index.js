@@ -66,9 +66,7 @@ const SearchCar = () => {
       <div className="filters">
         <div className="group-inpt-src">
           <select name="" id="">
-            <option value="fas fa-map-marker-alt">
-              &#xf3c5; Onde : São Paulo - SP
-            </option>
+            <option value="">Onde : São Paulo - SP</option>
           </select>
           <div className="sub-group-inpt-src">
             <select name="" id="">

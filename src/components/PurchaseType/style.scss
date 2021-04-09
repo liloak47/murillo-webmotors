@@ -40,10 +40,19 @@
       }
     }
   }
+  @media screen and(max-width: 729px) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .animation-btn-left {
   left: 256px;
+  @media screen and(max-width: 729px) {
+    left: 178px;
+  }
 }
 .animation-btn-default {
   left: 0px;

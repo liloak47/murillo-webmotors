@@ -5,7 +5,6 @@ import CardCars from "../CardCars";
 // import { Container } from './styles';
 
 const FilterVehicles = ({ nameMark, selectedModel }) => {
-  const [cars, setCars] = useState([]);
   const [carsFiltred, setCarsFiltred] = useState([]);
 
   console.log(nameMark);

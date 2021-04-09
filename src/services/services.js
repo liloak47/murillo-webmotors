@@ -1,5 +1,4 @@
 import api from "./api";
-
 export default {
   async getMark() {
     try {
