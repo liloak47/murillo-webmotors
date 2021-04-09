@@ -1,0 +1,50 @@
+.box-vehicle {
+  width: 933px;
+  display: flex;
+  justify-content: left;
+  .type-vehicle {
+    border: none;
+    background-color: transparent;
+    margin: 20px 0px;
+    padding: 0;
+    margin-right: 50px;
+    width: 100%;
+    cursor: pointer;
+    max-width: 200px;
+    position: relative;
+    h2 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      color: #b6b6b6;
+    }
+    hr {
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      background-color: #ca2430;
+      border: none;
+      margin: 0;
+      top: 73px;
+      transition: 1s;
+    }
+    p {
+      margin: 5px;
+      color: #b6b6b6;
+    }
+    &:focus {
+      outline: none;
+      h2 {
+        color: #ca2430;
+      }
+    }
+  }
+}
+
+.animation-btn-left {
+  left: 256px;
+}
+.animation-btn-default {
+  left: 0px;
+}

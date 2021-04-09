@@ -6,6 +6,7 @@ export const COLORS = {
   secondary: " #f3f5f8",
   default: "#fff",
   greyBasic: "#95939d",
+  inpt: "#bcbcbc",
   secondaryBtn: "#d9a649",
 };
 export const GlobalStyle = createGlobalStyle`
@@ -38,18 +39,32 @@ export const GlobalStyle = createGlobalStyle`
   a{
     text-decoration: none;
   }
+  select{
+    background: none;
+    border: 1px solid ${COLORS.inpt};
+    padding: 5px;
+    border-radius: 2px;
+    color: ${COLORS.greyBasic};
+    &:focus {
+        border-color: #000;
+      }
+
+  }
+  option{
+  }
 `;
 
 export const Button = styled.button`
   color: ${COLORS.default};
   background-color: ${COLORS.primaryBtn};
   border: none;
-  margin: 50px;
   width: 250px;
   padding: 15px 0px;
   font-weight: bold;
   border-radius: 2px;
   transition-duration: 0.5s;
+  cursor: pointer;
+
   &:hover {
     filter: brightness(85%);
   }
@@ -66,12 +81,28 @@ export const Button = styled.button`
       }
       `
       : null}
+  ${(props) =>
+    props.clear
+      ? `color: ${COLORS.greyBasic}; 
+      background-color: transparent; 
+      border: none; 
+      border-color: ${COLORS.secondaryBtn};
+      font-weight: normal;
+      width: 100px;
+      &:hover{
+        filter: brightness(100%);
+        color: none; 
+        background-color: none; 
+      }
+      `
+      : null}
 `;
 
 export const Container = styled.div`
   margin: 40px 0px;
   padding: 0px 120px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   width: 100%;
   align-items: center;

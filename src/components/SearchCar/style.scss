@@ -1,8 +1,8 @@
 .box-search {
   width: 933px;
+  padding: 40px;
   height: 312px;
   background-color: #fff;
-  box-shadow: 0px 0px 9px 0px #95939d;
   .type-movel {
     display: flex;
     .choice {
@@ -16,5 +16,38 @@
         height: 20px;
       }
     }
+  }
+}
+select {
+  font-family: "FontAwesome", "";
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+
+  .group-inpt-src {
+    margin: 10px;
+    width: 100%;
+    max-width: 450px;
+    select {
+      width: 100%;
+      margin: 5px 0px;
+    }
+    .sub-group-inpt-src {
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
+}
+
+.footer-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  .group-btn-footer {
+    display: flex;
+    align-items: center;
   }
 }
