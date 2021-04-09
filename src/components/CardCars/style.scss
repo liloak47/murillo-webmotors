@@ -1,0 +1,38 @@
+.card-vehicle {
+  width: 400px;
+  display: flex;
+  background-color: #fff;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 15px 0px #dcdde1;
+  figure {
+    width: 200px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    img {
+      width: 100%;
+    }
+  }
+  h3 {
+    margin: 0;
+    margin-top: 5px;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 0px 15px;
+    li {
+      font-size: 12px;
+      margin-bottom: 5px;
+    }
+  }
+  @media screen and(max-width: 729px) {
+    width: 100%;
+  }
+}
